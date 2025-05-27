@@ -1,0 +1,11 @@
+<nav class="menu-container">
+  <ul class="menu-list">
+    <li
+      *ngFor="let item of menuItems"
+      [class.selected]="selectedItem === item.route"
+      (click)="selectItem(item)"
+    >
+      {{ item.label }}
+    </li>
+  </ul>
+</nav>

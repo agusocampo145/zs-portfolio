@@ -1,0 +1,6 @@
+<div class="container">
+  <app-menu></app-menu> <!-- Menú lateral persistente -->
+  <div class="content" [@routeAnimations]="getRouteAnimationData(o)">
+    <router-outlet #o="outlet"></router-outlet> <!-- Carga las páginas dinámicamente -->
+  </div>
+</div>

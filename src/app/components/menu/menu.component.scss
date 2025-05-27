@@ -1,0 +1,68 @@
+/* Estilo base para escritorio */
+.menu-container {
+  background-color: #040404;
+  color: white;
+  height: 100vh;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menu-list li {
+  text-align: center;
+  padding: 1rem;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.menu-list li:hover,
+.menu-list li.selected {
+  opacity: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Estilos responsivos: menú horizontal */
+@media (max-width: 768px) {
+  .menu-container {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-list li {
+    flex: 1;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}

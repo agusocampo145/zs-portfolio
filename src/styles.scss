@@ -1,0 +1,125 @@
+/* styles.css global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #040404;
+  color: white;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #1c1c1c;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.sidebar-item {
+  color: white;
+  opacity: 0.6;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.content {
+  width: 80%;
+  padding: 2rem;
+  overflow-y: auto;
+  transition: all 0.3s;
+}
+
+h1{
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2{
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p{
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 0;
+  }
+
+  .sidebar-item {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Fade animation for route transitions */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

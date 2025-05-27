@@ -1,0 +1,71 @@
+.contenedor-cartas {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  padding-top: 12rem;
+}
+
+.contenedor-cartas.vertical {
+  flex-direction: column;
+  align-items: center;
+}
+
+.carta {
+  width: 17rem;
+  height: 17rem;
+  background: #e0e0e0;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 3rem;
+  color: black;
+}
+
+.carta.seleccionada {
+  transform: scale(1.1);
+  background: #ffffff;
+  z-index: 10;
+  height: fit-content;
+  width: 20rem;
+}
+
+.carta .descripcion{
+  transition: ccolor 1s;
+  color: white;
+}
+
+.carta.seleccionada .descripcion {
+  transition: color 1s;
+  color: black;
+}
+
+.carta.seleccionada img{
+height: 12rem;
+transition: height 0.5s, width 0.5s;
+}
+
+.carta.opaca {
+  opacity: 0.5;
+}
+
+.descripcion-final {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.carta h2{
+  margin: 1rem;
+}
+
+img{
+  height: 10rem;
+  width: auto;
+  border-radius: 10px;
+  transition: height 0.3s, width 0.3s;
+}

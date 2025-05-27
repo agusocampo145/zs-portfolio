@@ -1,0 +1,20 @@
+<div class="contenedor-cartas" [class.vertical]="isMobile">
+  <div
+    class="carta"
+    *ngFor="let carta of cartas; let i = index"
+    [class.seleccionada]="isMobile ? cartaActiva === i : hoveredIndex === i"
+    [class.opaca]="!isMobile && hoveredIndex !== null && hoveredIndex !== i"
+    (mouseenter)="onHover(i)"
+    (mouseleave)="onHover(null)"
+    #cartaRef
+  >
+    <img src="{{carta.src}}">
+    <h2>{{ carta.titulo }}</h2>
+    <p *ngIf="isMobile ? cartaActiva === i : hoveredIndex === i" class="descripcion">{{ carta.descripcion }}</p>
+  </div>
+</div>
+
+<h2 class="descripcion-final">Solucionamos tus problemas, a medida.</h2>
+<p class="descripcion-final">Mediamos y diseñamos la pieza, accesorio u objeto que necesites,
+  o quieras.</p>
+

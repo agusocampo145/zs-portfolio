@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  app-menu {
+    width: 20%;
+    background-color: #040404;
+    color: white;
+  }
+  
+  .content {
+    width: 80%;
+    padding: 20px;
+    background-color: #040404;
+  }
+  
+
+  /* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  app-menu {
+    width: 0%;
+    background-color: hsl(0, 0%, 10%);
+    color: white;
+  }
+  
+  .content {
+    width: 100%;
+    padding: 20px;
+    background-color: hsl(0, 0%, 10%);
+  }
+  
+}

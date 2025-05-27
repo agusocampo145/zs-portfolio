@@ -1,0 +1,158 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem;
+  max-width: 100%;
+  height: 20rem;
+  margin-top: 8rem;
+}
+
+.imagenes {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  transition: transform 0.7s ease-in-out;
+}
+
+img {
+  transition: all 0.7s ease;
+  max-height: 300px;
+  opacity: 0.3;
+  width: auto;
+  object-fit: contain;
+  margin: 1rem;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+img.activa {
+  opacity: 1;
+  transform: scale(1.1);
+  height: 19rem;
+}
+
+img.adyacente {
+  opacity: 0.5;
+  height: 15rem;
+}
+
+img.oculta {
+  display: none;
+}
+
+.flechas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  margin-top: -4rem;
+}
+
+
+.flecha {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #555;
+  user-select: none;
+  padding: 0.8rem;
+  transition: transform 0.3s ease;
+  border-radius: 25%;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  margin: 17rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  border: 1px solid white;
+}
+
+.flecha:hover {
+  transform: scale(1.3);
+  color: white;
+  background-color: rgba(59, 58, 58, 0.664);
+}
+
+.descripcion {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.texto-inferior {
+
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Nueva animación de entrada */
+img.entrada-derecha {
+  animation: entradaDesdeDerecha 0.3s ease;
+}
+img.entrada-izquierda {
+  animation: entradaDesdeIzquierda 0.3s ease;
+}
+
+@keyframes entradaDesdeDerecha {
+  from {
+    transform: translateX(40%) scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes entradaDesdeIzquierda {
+  from {
+    transform: translateX(-40%) scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .imagenes {
+    justify-content: center;
+  }
+
+  img {
+    display: none;
+  }
+
+  img.activa {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .carousel-container {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .flecha{
+    margin: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .flechas{
+    margin-top: 0rem;
+  }
+}

@@ -1,0 +1,28 @@
+<div class="carousel-container">
+  <div class="imagenes">
+    <img
+    *ngFor="let foto of fotos; let i = index"
+    [src]="foto.src"
+    [class.activa]="isActiva(i)"
+    [class.adyacente]="Math.abs(i - fotoSeleccionada) === 1"
+    [class.oculta]="Math.abs(i - fotoSeleccionada) > 1"
+    [class.entrada-derecha]="isActiva(i) && ultimaDireccion === 'derecha'"
+    [class.entrada-izquierda]="isActiva(i) && ultimaDireccion === 'izquierda'"
+    alt="Foto"
+  />
+  </div>
+</div>
+
+<div class="flechas">
+  <div class="flecha izquierda" (click)="anterior()">&#10094;</div>
+  <div class="flecha derecha" (click)="siguiente()">&#10095;</div>
+</div>
+
+<div class="descripcion">
+  <p>{{ fotos[fotoSeleccionada].descripcion }}</p>
+</div>
+
+<div class="texto-inferior">
+  <h2>Servicios de fotografia,.
+    espcializados en areas automotriz y ambiental.</h2>
+</div>
