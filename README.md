@@ -49,6 +49,7 @@ Este proyecto nació de la necesidad de tener un espacio propio donde reunir los
 ## 🚀 Próximas mejoras
 
 - Incluir la biblioteca i18n para poder integrar la traduccion automatica en diferentes idiomas de la pagina
+- Mejorar el tiempo de carga de imagenes
 
 ---
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
