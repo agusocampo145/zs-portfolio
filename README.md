@@ -1,33 +1,50 @@
-# ✨ Portfolio ZS ✨
+# 🧩 Portfolio ZS
 
-## 📝 Descripción
+![Angular](https://img.shields.io/badge/Angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-%23CD6799.svg?style=for-the-badge&logo=sass&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
+![Responsive](https://img.shields.io/badge/Responsive-Design-%2300C49A?style=for-the-badge&logo=responsive&logoColor=white)
 
-Este proyecto es un portafolio profesional desarrollado con **Angular**. Está diseñado para mostrar mis habilidades y proyectos. La aplicación está alojada utilizando **Firebase Hosting**.
+> Portfolio personal desarrollado con Angular y desplegado en Firebase. Totalmente responsive, visualmente atractivo y pensado para comunicar ideas de forma clara y creativa.
 
-## 🛠️ Tecnologías Usadas
+---
 
-Este proyecto fue construido utilizando las siguientes tecnologías principales:
+## ✨ Sobre el proyecto
 
-*   **Angular**: Un framework para construir aplicaciones web robustas.
-*   **EmailJS**: Para el envío de correos electrónicos desde el frontend.
-*   **Firebase Hosting**: Para alojar la aplicación de forma sencilla y rápida.
+Este portfolio fue creado para presentar los distintos servicios y proyectos personales desarrollados bajo la identidad de **ZS**. Se divide en distintas secciones:
 
-## 🚀 Características
+- **Inicio**: Presentación y navegación principal.
+- **Sobre mí**: Con animaciones, imagen intercambiable y texto descriptivo.
+- **Fotografía**: Carrusel interactivo y vinculación a redes sociales.
+- **Impresiones 3D**: Cartas dinámicas con efectos hover y scroll para mobile.
+- **Contacto** Tarjetas de contacto por mail y redes sociales
+Todo con un diseño responsive, transiciones suaves, y un enfoque en la experiencia del usuario.
 
-El portafolio incluye las siguientes secciones clave:
+---
 
-*   **Inicio**: La página principal con una introducción.
-*   **Sobre Mí / Nosotros**: Información sobre mí o el equipo.
-*   **Contacto**: Un formulario o información para ponerse en contacto.
-*   **Diseños 3D**: Mostrar proyectos o trabajos de diseño 3D.
-*   **Fotografía**: Exhibir trabajos de fotografía.
+## 🛠️ Tecnologías usadas
 
-## 🌐 Despliegue
+- **Angular** – Framework principal
+- **TypeScript** – Lógica y estructura
+- **HTML5 & SCSS** – Maquetado y estilos avanzados
+- **Firebase** – Hosting y despliegue
+Este proyecto no cuenta con backend, ya que no era necesario. 
 
-La aplicación está desplegada en **Firebase Hosting**.
+---
 
-# ZsPortfolio
+## 📸 Enlace al portfolio
 
+👉 [https://portfolio-zs.web.app/] 
+
+---
+
+## 💬 Comentarios personales
+
+Este proyecto nació de la necesidad de tener un espacio propio donde reunir los distintos proyectos que realizo fuera del trabajo y el estudio. Aunque a veces es difícil encontrar el tiempo, construir este sitio fue una forma de disfrutar el proceso creativo, aplicar lo aprendido y darle identidad a mis ideas.
+
+---
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
 ## Development server
