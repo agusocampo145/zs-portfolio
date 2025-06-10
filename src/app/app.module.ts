@@ -8,6 +8,9 @@ import { FotografiaComponent } from './components/fotografia/fotografia.componen
 import { Disenos3dComponent } from './components/disenos3d/disenos3d.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,12 +19,15 @@ import { HomeComponent } from './components/home/home.component';
     MenuComponent,
     FotografiaComponent,
     Disenos3dComponent,
-    HomeComponent
+    HomeComponent,
+    AboutUsComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

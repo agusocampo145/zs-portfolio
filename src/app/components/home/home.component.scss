@@ -6,12 +6,34 @@
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  color: white
+  color: white;
 }
 
-img{
+
+
+svg{
   margin: 1rem;
-  margin-bottom:0px;
-  height: 30rem;
+  margin-bottom:3rem;
+  height: 20rem;
   width: auto;
+}
+
+.logo-animation svg {
+  stroke-dasharray: 1800; /* Longitud total del trazo */
+  stroke-dashoffset: 1800; /* Inicialmente, el trazo está oculto */
+  animation: drawLogo 2s ease-in-out forwards;
+}
+
+
+@keyframes drawLogo {
+  to {
+    stroke-dashoffset: 0; /* El trazo se muestra completamente */
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  svg{
+    height: 10rem;
+  }
 }

@@ -1,15 +1,22 @@
 <div class="carousel-container">
   <div class="imagenes">
-    <img
-    *ngFor="let foto of fotos; let i = index"
-    [src]="foto.src"
-    [class.activa]="isActiva(i)"
-    [class.adyacente]="Math.abs(i - fotoSeleccionada) === 1"
-    [class.oculta]="Math.abs(i - fotoSeleccionada) > 1"
-    [class.entrada-derecha]="isActiva(i) && ultimaDireccion === 'derecha'"
-    [class.entrada-izquierda]="isActiva(i) && ultimaDireccion === 'izquierda'"
-    alt="Foto"
-  />
+    <div
+      class="imagen-wrapper"
+      *ngFor="let foto of fotos; let i = index"
+    >
+      <img
+        [src]="foto.src"
+        [class.activa]="isActiva(i)"
+        [class.adyacente]="Math.abs(i - fotoSeleccionada) === 1"
+        [class.oculta]="Math.abs(i - fotoSeleccionada) > 1"
+        [class.entrada-derecha]="isActiva(i) && ultimaDireccion === 'derecha'"
+        [class.entrada-izquierda]="isActiva(i) && ultimaDireccion === 'izquierda'"
+        (load)="marcarCargada(i)"
+        [class.loaded]="imagenesCargadas[i]"
+        alt="Foto"
+      />
+      <div *ngIf="!imagenesCargadas[i]" class="loader"></div>
+    </div>
   </div>
 </div>
 
@@ -23,6 +30,18 @@
 </div>
 
 <div class="texto-inferior">
-  <h2>Servicios de fotografia,.
-    espcializados en areas automotriz y ambiental.</h2>
+  <h4>
+    Capturamos la personalidad única de cada vehículo con imágenes impactantes y de alta calidad.<br>
+    Nos especializamos en eventos como Drift, Track Days y carreras, así como en books personalizados para entusiastas o publicaciones de venta.<br>
+    Cada toma está pensada para resaltar diseño, potencia y estilo, tanto en movimiento como en detalle.<br>
+    <br>
+  </h4>
 </div>
+<h1>Convertimos tu auto en el verdadero protagonista de una historia visual.</h1>
+<div class="instagram-link">
+  <a href="https://www.instagram.com/zs_teams" target="_blank" rel="noopener">
+    <img src="assets/instagram.png" alt="Instagram" class="instagram-icon" />
+  @ZS_TEAMS
+  </a>
+</div>
+

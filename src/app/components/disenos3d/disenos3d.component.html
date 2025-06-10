@@ -1,3 +1,5 @@
+<h1 class="descripcion-final" style="margin-top: 5rem;">A veces solo necesitás algo que no existe... <span>todavía.</span></h1>
+
 <div class="contenedor-cartas" [class.vertical]="isMobile">
   <div
     class="carta"
@@ -8,13 +10,30 @@
     (mouseleave)="onHover(null)"
     #cartaRef
   >
-    <img src="{{carta.src}}">
+    <!-- Loader -->
+    <div class="loader" *ngIf="cargandoImagenes[i]"></div>
+
+    <!-- Imagen con loader -->
+    <img
+      [src]="carta.src"
+      (load)="cargandoImagenes[i] = false"
+      [class.oculta]="cargandoImagenes[i]"
+    />
+
     <h2>{{ carta.titulo }}</h2>
     <p *ngIf="isMobile ? cartaActiva === i : hoveredIndex === i" class="descripcion">{{ carta.descripcion }}</p>
   </div>
 </div>
 
-<h2 class="descripcion-final">Solucionamos tus problemas, a medida.</h2>
-<p class="descripcion-final">Mediamos y diseñamos la pieza, accesorio u objeto que necesites,
-  o quieras.</p>
-
+<div [class.opacado]="haySeleccionada">
+  <h4 class="descripcion-final">¿Tenés una idea? Nosotros le damos forma. <br><br>Diseñamos e imprimimos objetos 3D pensados para resolver, decorar o simplemente funcionar.</h4>
+  <p class="descripcion-final">¡Encontranos en Printables!</p>
+  <div class="usuario-printables descripcion-final">
+    <img src="assets/printables.jpg">
+    <a href="https://www.printables.com/@AgusOcampo_607390" target="_blank" rel="noopener noreferrer">
+      @AgusOcampo_607390
+    </a>
+  </div>
+</div>
+<div *ngIf="isMobile" style="height: 8rem;"></div>
+<br>

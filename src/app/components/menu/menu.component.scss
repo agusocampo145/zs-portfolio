@@ -62,7 +62,12 @@
   .menu-list li {
     flex: 1;
     padding: 1rem 0.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
+  }
+
+  .menu-list li:hover,
+  .menu-list li.selected{
+    font-size: 1rem;
   }
 }

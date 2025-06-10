@@ -9,8 +9,10 @@ import { Router } from '@angular/router';
 export class MenuComponent {
   menuItems = [
     { label: 'Home', route: '/home' },
+    { label: 'Sobre Nosotros', route: '/aboutUs' },
     { label: 'Fotografía', route: '/fotografia' },
-    { label: 'Diseños 3D', route: '/disenos3d' }
+    { label: 'Impresiones 3D', route: '/disenos3d' },
+    { label: 'Contacto', route: '/contacto' }
   ];
 
   selectedItem = '/home';

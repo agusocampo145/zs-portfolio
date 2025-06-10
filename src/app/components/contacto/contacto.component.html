@@ -1,0 +1,94 @@
+<div class="contact-container">
+  <h1>Contacto</h1>
+  <br />
+  <h2>
+    ¿Listo para colaborar o simplemente charlar? ¡No dudes en escribirme! <br> 
+    Me
+    encanta conectar con nuevas ideas y proyectos. Ya sea un café virtual o un
+    desafío profesional, aca estoy.
+  </h2>
+  <br />
+
+  <div class="social-links">
+    <a
+      href="https://instagram.com/agus_ocampo145"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="assets/instagram.png" alt="Instagram" /> Instagram
+    </a>
+    <a
+      href="https://github.com/agusocampo145"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="assets/github.png" style="background-color: white;border-radius: 26px;" alt="GitHub" /> GitHub
+    </a>
+    <a
+      href="https://printables.com/@AgusOcampo_607390"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="assets/printables.jpg" style="border-radius: 5px;"alt="Printables" /> Printables
+    </a>
+    <a
+      href="https://wa.me/+541157013158?text=Hola! Te escribo para transformar una idea en realidad :)"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="assets/whatsapp.jpg" style="border-radius: 25px;" alt="WhatsApp" /> WhatsApp
+    </a>
+  </div>
+
+  <form (ngSubmit)="enviarFormulario()" #contactForm="ngForm" class="contact-form">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        required
+        [(ngModel)]="formData.nombre"
+        #nombre="ngModel"
+        [class.invalid]="nombre.invalid && nombre.touched"
+      />
+      <div class="error" *ngIf="nombre.invalid && nombre.touched">Este campo es obligatorio.</div>
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        [(ngModel)]="formData.email"
+        #email="ngModel"
+        [class.invalid]="email.invalid && email.touched"
+      />
+      <div class="error" *ngIf="email.invalid && email.touched">Ingrese un email válido.</div>
+    </div>
+  
+    <div class="form-group">
+      <label for="mensaje">Mensaje:</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        required
+        [(ngModel)]="formData.mensaje"
+        #mensaje="ngModel"
+        [class.invalid]="mensaje.invalid && mensaje.touched"
+        style="height: 8rem;"
+      ></textarea>
+      <div class="error" *ngIf="mensaje.invalid && mensaje.touched">Este campo es obligatorio.</div>
+    </div>
+  
+    <button type="submit" [disabled]="enviando || contactForm.invalid">
+      {{ enviando ? 'Enviando...' : 'Enviar' }}
+    </button>
+  
+    <h2 *ngIf="mensajeExito" class="success-message">¡Tu mensaje fue enviado con éxito!</h2>
+    <h2 *ngIf="mensajeError" class="error-message">Hubo un error. Inténtalo nuevamente.</h2>
+  </form>
+  
+</div>

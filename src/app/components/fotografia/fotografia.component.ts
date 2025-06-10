@@ -9,16 +9,28 @@ export class FotografiaComponent {
   public Math = Math;
 
   fotos = [
-    { src: 'assets/foto1.jpg', descripcion: 'BMW - Drift Day, Arrecifes' },
-    { src: 'assets/foto2.jpg', descripcion: 'Stan de Ferraris varias - Autoclasica 2024' },
-    { src: 'assets/foto3.jpg', descripcion: 'Refugio Agostino Rocca - Bariloche, Argentina' },
-    { src: 'assets/foto5.jpg', descripcion: 'Yamaha R6 en movimiento - Trabajo Particular' },
+    { src: 'assets/audi.JPG', descripcion: 'Audi RS6 - Boxes del Autodromo de Buenos Aires Oscar y Juan Galvéz' },
+    { src: 'assets/foto2.jpg', descripcion: 'Stand de Ferraris varias - Autoclasica 2024' },
+    { src: 'assets/greenbee.JPG', descripcion: 'Toyota Corolla Drift - Baradero, Argentina' },
     { src: 'assets/foto6.jpg', descripcion: 'Motor Torino - Autoclasica 2024' },
+    { src: 'assets/drift2.JPG', descripcion: 'Tandem de Drift - Baradero, Argentina' },
+    { src: 'assets/Quattro.jpg', descripcion: 'Replica Audi Quattro S1 - Autoclasica 2023' },
+    { src: 'assets/torino.JPG', descripcion: 'Replica Torino Nurbugring - Autodromo de Buenos Aires Oscar y Juan Galvéz (mixtos)' },
+
   ];
 
+  imagenesCargadas: boolean[] = [];
   fotoSeleccionada = 2;
   ultimaDireccion: 'izquierda' | 'derecha' = 'derecha';
   transicionando = false;
+
+  ngOnInit() {
+    this.imagenesCargadas = this.fotos.map(() => false);
+  }
+
+  marcarCargada(index: number) {
+    this.imagenesCargadas[index] = true;
+  }
 
   siguiente() {
     if (this.fotoSeleccionada < this.fotos.length - 1 && !this.transicionando) {
@@ -28,7 +40,7 @@ export class FotografiaComponent {
       setTimeout(() => {
         this.fotoSeleccionada++;
         this.transicionando = false;
-      }, 100); // Tiempo similar al de la animación CSS
+      }, 80); // Tiempo similar al de la animación CSS
     }
   }
 
@@ -40,7 +52,7 @@ export class FotografiaComponent {
       setTimeout(() => {
         this.fotoSeleccionada--;
         this.transicionando = false;
-      }, 500);
+      }, 80);
     }
   }
 

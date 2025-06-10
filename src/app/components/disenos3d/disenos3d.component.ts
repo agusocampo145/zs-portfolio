@@ -14,20 +14,24 @@ import {
 })
 export class Disenos3dComponent implements AfterViewInit {
   cartas = [
-    { titulo: 'Diseñamos', descripcion: 'Medimos, diseñamos y personalizamos la solucion para que se ajuste perfectamente a tus necesidades', src:'assets/foto1.jpg' },
-    { titulo: 'Imprimimos', descripcion: 'Descripción del modelo B', src:'assets/foto2.jpg' },
-    { titulo: 'Creamos', descripcion: 'Descripción del modelo C', src:'assets/foto3.jpg' },
+    { titulo: 'Diseñamos', descripcion: 'Medimos, diseñamos y personalizamos la solucion para que se ajuste perfectamente a tus necesidades', src:'assets/diseniamos.png' },
+    { titulo: 'Imprimimos', descripcion: 'Damos vida a tus diseños con impresiones 3D ajustadas a tus necesidades. Usamos materiales seleccionados según el uso y exigencias de cada proyecto. ', src:'assets/imprimimos.JPG' },
+    { titulo: 'Creamos', descripcion: 'Combinamos diseño, impresión y acabado para entregarte piezas únicas y profesionales. Ideal para prototipos, productos personalizados o soluciones creativas.', src:'assets/creamos.JPG' },
   ];
 
   hoveredIndex: number | null = null;
   isMobile = false;
   cartaActiva = 0;
+  cargandoImagenes: boolean[] = [];
+
 
   @ViewChildren('cartaRef', { read: ElementRef }) cartaElements!: QueryList<ElementRef>;
-
+  
   ngAfterViewInit(): void {
     this.actualizarMobile();
     if (this.isMobile) this.setupScrollObserver();
+  
+    this.cargandoImagenes = this.cartas.map(() => true); // Inicializa loaders
   }
 
   @HostListener('window:resize')
@@ -39,6 +43,10 @@ export class Disenos3dComponent implements AfterViewInit {
     if (this.isMobile && !anterior) {
       this.setupScrollObserver();
     }
+  }
+
+  get haySeleccionada(): boolean {
+    return this.hoveredIndex !== null && !this.isMobile;
   }
 
   actualizarMobile() {
@@ -74,7 +82,7 @@ export class Disenos3dComponent implements AfterViewInit {
       {
         root: null,
         threshold: Array.from({ length: 11 }, (_, i) => i / 10), // [0.0, 0.1, ..., 1.0]
-        rootMargin: '0px 0px -40% 0px' // considerar el centro visual
+        rootMargin: '0px 0px -60% 0px' // considerar el centro visual
       }
     );
   
