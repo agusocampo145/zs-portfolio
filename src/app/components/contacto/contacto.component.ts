@@ -29,7 +29,7 @@ export class ContactoComponent implements OnInit {
     this.mensajeExito = false;
     this.mensajeError = false;
 
-    emailjs.send('xxx', 'xxx', this.formData, 'xxx')
+    emailjs.send('XXX', 'XXX', this.formData, 'XXX')
       .then(() => {
         this.mensajeExito = true;
         this.formData = { nombre: '', email: '', mensaje: '' };
