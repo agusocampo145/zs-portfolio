@@ -45,6 +45,12 @@ Este proyecto no cuenta con backend, ya que no era necesario.
 Este proyecto nació de la necesidad de tener un espacio propio donde reunir los distintos proyectos que realizo fuera del trabajo y el estudio. Aunque a veces es difícil encontrar el tiempo, construir este sitio fue una forma de disfrutar el proceso creativo, aplicar lo aprendido y darle identidad a mis ideas.
 
 ---
+
+## 🚀 Próximas mejoras
+
+- Incluir la biblioteca i19n para poder integrar la traduccion automatica en diferentes idiomas de la pagina
+
+---
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
 ## Development server
