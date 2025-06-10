@@ -6,6 +6,7 @@
     >
       <img
         [src]="foto.src"
+        loading="foto.loading"
         [class.activa]="isActiva(i)"
         [class.adyacente]="Math.abs(i - fotoSeleccionada) === 1"
         [class.oculta]="Math.abs(i - fotoSeleccionada) > 1"
@@ -41,7 +42,7 @@
 <h1>Convertimos tu auto en el verdadero protagonista de una historia visual.</h1>
 <div class="instagram-link">
   <a href="https://www.instagram.com/zs_teams" target="_blank" rel="noopener">
-    <img src="assets/instagram.png" alt="Instagram" class="instagram-icon" />
+    <img src="assets/icons/instagram.png" alt="Instagram" class="instagram-icon" />
   @zs_teams
   </a>
 </div>

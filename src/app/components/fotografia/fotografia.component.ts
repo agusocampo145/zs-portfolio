@@ -9,13 +9,13 @@ export class FotografiaComponent {
   public Math = Math;
 
   fotos = [
-    { src: 'assets/audi.JPG', descripcion: 'Audi RS6 - Boxes del Autodromo de Buenos Aires Oscar y Juan Galvéz' },
-    { src: 'assets/foto2.jpg', descripcion: 'Stand de Ferraris varias - Autoclasica 2024' },
-    { src: 'assets/greenbee.JPG', descripcion: 'Toyota Corolla Drift - Baradero, Argentina' },
-    { src: 'assets/foto6.jpg', descripcion: 'Motor Torino - Autoclasica 2024' },
-    { src: 'assets/drift2.JPG', descripcion: 'Tandem de Drift - Baradero, Argentina' },
-    { src: 'assets/Quattro.jpg', descripcion: 'Replica Audi Quattro S1 - Autoclasica 2023' },
-    { src: 'assets/torino.JPG', descripcion: 'Replica Torino Nurbugring - Autodromo de Buenos Aires Oscar y Juan Galvéz (mixtos)' },
+    { src: 'assets/fotografia/audi.JPG', descripcion: 'Audi RS6 - Boxes del Autodromo de Buenos Aires Oscar y Juan Galvéz', loading: 'lazy'},
+    { src: 'assets/fotografia/foto2.jpg', descripcion: 'Stand de Ferraris varias - Autoclasica 2024', loading: 'lazy' },
+    { src: 'assets/fotografia/greenbee.webp', descripcion: 'Toyota Corolla Drift - Baradero, Argentina', loading: 'eager' },
+    { src: 'assets/fotografia/foto6.jpg', descripcion: 'Motor Torino - Autoclasica 2024', loading: 'lazy' },
+    { src: 'assets/fotografia/drift2.JPG', descripcion: 'Tandem de Drift - Baradero, Argentina', loading: 'lazy' },
+    { src: 'assets/fotografia/Quattro.jpg', descripcion: 'Replica Audi Quattro S1 - Autoclasica 2023', loading: 'lazy' },
+    { src: 'assets/fotografia/torino.JPG', descripcion: 'Replica Torino Nurbugring - Autodromo de Buenos Aires Oscar y Juan Galvéz (mixtos)', loading: 'lazy' },
 
   ];
 

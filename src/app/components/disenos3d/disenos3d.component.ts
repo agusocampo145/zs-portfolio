@@ -14,9 +14,9 @@ import {
 })
 export class Disenos3dComponent implements AfterViewInit {
   cartas = [
-    { titulo: 'Diseñamos', descripcion: 'Medimos, diseñamos y personalizamos la solucion para que se ajuste perfectamente a tus necesidades', src:'assets/diseniamos.png' },
-    { titulo: 'Imprimimos', descripcion: 'Damos vida a tus diseños con impresiones 3D ajustadas a tus necesidades. Usamos materiales seleccionados según el uso y exigencias de cada proyecto. ', src:'assets/imprimimos.JPG' },
-    { titulo: 'Creamos', descripcion: 'Combinamos diseño, impresión y acabado para entregarte piezas únicas y profesionales. Ideal para prototipos, productos personalizados o soluciones creativas.', src:'assets/creamos.JPG' },
+    { titulo: 'Diseñamos', descripcion: 'Medimos, diseñamos y personalizamos la solucion para que se ajuste perfectamente a tus necesidades', src:'assets/3d/diseniamos.png' },
+    { titulo: 'Imprimimos', descripcion: 'Damos vida a tus diseños con impresiones 3D ajustadas a tus necesidades. Usamos materiales seleccionados según el uso y exigencias de cada proyecto. ', src:'assets/3d/imprimimos.JPG' },
+    { titulo: 'Creamos', descripcion: 'Combinamos diseño, impresión y acabado para entregarte piezas únicas y profesionales. Ideal para prototipos, productos personalizados o soluciones creativas.', src:'assets/3d/creamos.JPG' },
   ];
 
   hoveredIndex: number | null = null;

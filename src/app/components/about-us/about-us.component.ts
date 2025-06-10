@@ -11,7 +11,7 @@ export class AboutUsComponent implements OnInit {
 
   cargandoImagen: boolean = true;
 
-  imagenes: string[] = ['assets/yo.JPG', 'assets/sobreMi.jpg'];
+  imagenes: string[] = ['assets/sobreMi/yo.JPG', 'assets/sobreMi/sobreMi.jpg'];
   imagenActual: string = this.imagenes[0];
   indiceActual: number = 0;
   intervalo!: ReturnType<typeof setInterval>;
