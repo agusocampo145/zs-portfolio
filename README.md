@@ -1,3 +1,31 @@
+# ✨ Nombre de tu Proyecto ✨
+
+## 📝 Descripción
+
+Este proyecto es un portafolio profesional desarrollado con **Angular**. Está diseñado para mostrar mis habilidades y proyectos. La aplicación está alojada utilizando **Firebase Hosting**.
+
+## 🛠️ Tecnologías Usadas
+
+Este proyecto fue construido utilizando las siguientes tecnologías principales:
+
+*   **Angular**: Un framework para construir aplicaciones web robustas.
+*   **EmailJS**: Para el envío de correos electrónicos desde el frontend.
+*   **Firebase Hosting**: Para alojar la aplicación de forma sencilla y rápida.
+
+## 🚀 Características
+
+El portafolio incluye las siguientes secciones clave:
+
+*   **Inicio**: La página principal con una introducción.
+*   **Sobre Mí / Nosotros**: Información sobre mí o el equipo.
+*   **Contacto**: Un formulario o información para ponerse en contacto.
+*   **Diseños 3D**: Mostrar proyectos o trabajos de diseño 3D.
+*   **Fotografía**: Exhibir trabajos de fotografía.
+
+## 🌐 Despliegue
+
+La aplicación está desplegada en **Firebase Hosting**.
+
 # ZsPortfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
