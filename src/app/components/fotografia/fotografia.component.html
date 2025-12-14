@@ -1,9 +1,6 @@
 <div class="carousel-container">
   <div class="imagenes">
-    <div
-      class="imagen-wrapper"
-      *ngFor="let foto of fotos; let i = index"
-    >
+    <div class="imagen-wrapper" *ngFor="let foto of fotos; let i = index">
       <img
         [src]="foto.src"
         loading="foto.loading"
@@ -11,7 +8,9 @@
         [class.adyacente]="Math.abs(i - fotoSeleccionada) === 1"
         [class.oculta]="Math.abs(i - fotoSeleccionada) > 1"
         [class.entrada-derecha]="isActiva(i) && ultimaDireccion === 'derecha'"
-        [class.entrada-izquierda]="isActiva(i) && ultimaDireccion === 'izquierda'"
+        [class.entrada-izquierda]="
+          isActiva(i) && ultimaDireccion === 'izquierda'
+        "
         (load)="marcarCargada(i)"
         [class.loaded]="imagenesCargadas[i]"
         alt="Foto"
@@ -26,23 +25,31 @@
   <div class="flecha derecha" (click)="siguiente()">&#10095;</div>
 </div>
 
-<div class="descripcion">
+<div class="descripcion poppins-light">
   <p>{{ fotos[fotoSeleccionada].descripcion }}</p>
 </div>
 
 <div class="texto-inferior">
-  <h4>
-    Capturamos la personalidad única de cada vehículo con imágenes impactantes y de alta calidad.<br>
-    Nos especializamos en eventos como Drift, Track Days y carreras, así como en books personalizados para entusiastas o publicaciones de venta.<br>
-    Cada toma está pensada para resaltar diseño, potencia y estilo, tanto en movimiento como en detalle.<br>
-    <br>
+  <h4 class="poppins-light">
+    Capturamos la identidad de cada vehículo a través de imágenes de alto
+    impacto y calidad profesional. <br />
+    Trabajamos en eventos de Drift, Track Days y carreras, además de books
+    personalizados para entusiastas y contenidos orientados a publicaciones de
+    venta. <br />
+    Cada toma está pensada para destacar diseño, potencia y carácter, tanto en
+    acción como en los detalles.
   </h4>
 </div>
-<h1>Convertimos tu auto en el verdadero protagonista de una historia visual.</h1>
+<h1 class="poppins-bold">
+  Convertimos tu auto en el verdadero protagonista de una historia visual.
+</h1>
 <div class="instagram-link">
-  <a href="https://www.instagram.com/zs_teams" target="_blank" rel="noopener">
-    <img src="assets/icons/instagram.png" alt="Instagram" class="instagram-icon" />
-  @zs_teams
+  <a class="poppins-medium" href="https://www.instagram.com/zs_teams" target="_blank" rel="noopener">
+    <img
+      src="assets/icons/instagram.png"
+      alt="Instagram"
+      class="instagram-icon"
+    />
+    @zs_teams
   </a>
 </div>
-
